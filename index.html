@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MHD Zyad AL-Ftyan | Frontend Developer</title>
+    <!-- Font Awesome CDN (إصدار مستقر) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Zyad<span>.dev</span></a>
+        
+        <input type="checkbox" id="label-check" class="label-check">
+        
+        <div class="header-right">
+            <div class="lang-switch-wrapper">
+                <input type="checkbox" id="lang-checkbox" class="check-toggle">
+                <label for="lang-checkbox">
+                    <span class="lang-label en">EN</span>
+                    <span class="lang-label ar">AR</span>
+                </label>
+            </div>
+            <label for="label-check" class="menu-icon">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </label>
+        </div>
+
+        <nav class="navigation">
+            <a href="#home" class="active" data-lang="nav-home">Home</a>
+            <a href="#about" data-lang="nav-about">About</a>
+            <a href="#services" data-lang="nav-services">Services</a>
+            <a href="#projects" data-lang="nav-projects">Projects</a>
+            <a href="#contact" data-lang="nav-contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3 data-lang="hero-hello">Hello, I'm</h3>
+            <h1 data-lang="hero-name">MHD Zyad AL-Ftyan</h1>
+            <h3><span data-lang="hero-role-prefix">And I'm a</span> <span data-lang="hero-role">Frontend Developer</span></h3>
+            <p data-lang="hero-desc">I specialize in building high-performance, responsive, and visually stunning web applications. With a focus on clean code and user-centric design, I help turn complex ideas into seamless digital experiences.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/share/17CbPBVCXu/"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/0935761526" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/zyad-alftyan" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/zyad" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <a class="btn-cv" href="#" data-lang="btn-download-cv">Download CV</a>
+        </div>
+        <div class="div-Myimg">
+            <img src="/img/تصميم_بدون_عنوان__1_-removebg-preview.png" alt="MHD Zyad">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="/img/تصميم_بدون_عنوان__1_-removebg-preview.png" alt="About Me">
+        </div>
+        <div class="about-content">
+            <h2 class="section-title"><span data-lang="about-title-prefix">About</span> <span data-lang="about-title-span">Me</span></h2>
+            <h3 data-lang="about-subtitle">Frontend Developer & Coding Instructor</h3>
+            <p data-lang="about-desc1">I am a passionate Frontend Developer with over 3 years of experience in creating modern web interfaces. My journey started with a curiosity for how things work on the web, which evolved into a career dedicated to crafting exceptional user experiences.</p>
+            <p data-lang="about-desc2">Beyond coding, I am a Coding Instructor, sharing my knowledge with aspiring developers. I believe that teaching is the best way to master a craft, and I'm dedicated to helping the next generation of coders succeed.</p>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <h4>3+</h4>
+                    <p data-lang="stat-years">Years Exp.</p>
+                </div>
+                <div class="stat-item">
+                    <h4>50+</h4>
+                    <p data-lang="stat-projects">Projects</p>
+                </div>
+                <div class="stat-item">
+                    <h4>100+</h4>
+                    <p data-lang="stat-students">Students</p>
+                </div>
+            </div>
+            <a href="#contact" class="btn-cv" data-lang="btn-talk">Let's Talk</a>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span data-lang="services-title-prefix">What</span> <span data-lang="services-title-span">I Offer</span></h2>
+                <p class="section-subtitle" data-lang="services-subtitle">Professional front-end development & coding mentorship services</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 data-lang="service1-title">Interactive Front-end</h3>
+                    <p data-lang="service1-desc">Fully responsive, fast, modern websites built with HTML5, CSS3, JavaScript — pixel-perfect, cross-browser.</p>
+                    <a href="#contact" class="service-link"><span data-lang="service-request">Request service</span> <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-chalkboard-user"></i></div>
+                    <h3 data-lang="service2-title">1-on-1 Coding Tutoring</h3>
+                    <p data-lang="service2-desc">Private sessions: from zero to real projects. Personalized roadmap, hands-on exercises & feedback.</p>
+                    <a href="#contact" class="service-link"><span data-lang="service-request">Request service</span> <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-code-branch"></i></div>
+                    <h3 data-lang="service3-title">Code Review & Refactor</h3>
+                    <p data-lang="service3-desc">Deep analysis of codebase, identifying bugs, performance issues, clean & maintainable solutions.</p>
+                    <a href="#contact" class="service-link"><span data-lang="service-request">Request service</span> <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3 data-lang="service4-title">Design to Code</h3>
+                    <p data-lang="service4-desc">Convert Figma, PSD, XD into accurate, responsive, production-ready HTML/CSS/JS.</p>
+                    <a href="#contact" class="service-link"><span data-lang="service-request">Request service</span> <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-users"></i></div>
+                    <h3 data-lang="service5-title">Group Workshops</h3>
+                    <p data-lang="service5-desc">Live intensive workshops covering React, Tailwind, Git, REST APIs, modern front-end tools.</p>
+                    <a href="#contact" class="service-link"><span data-lang="service-request">Request service</span> <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <h3 data-lang="service6-title">Performance Optimization</h3>
+                    <p data-lang="service6-desc">Boost speed, achieve 90+ Lighthouse scores, improve Core Web Vitals for SEO & UX.</p>
+                    <a href="#contact" class="service-link"><span data-lang="service-request">Request service</span> <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ===== PROJECTS SECTION ===== -->
+<section class="projects" id="projects">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title"><span data-lang="projects-title-prefix">Latest</span> <span data-lang="projects-title-span">Projects</span></h2>
+            <p class="section-subtitle" data-lang="projects-subtitle">Some of my front-end work — real-world apps and interactive designs</p>
+        </div>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://placehold.co/600x400/1f242d/0ef?text=Weather+App" alt="Weather App">
+                </div>
+                <div class="project-info">
+                    <h3 data-lang="project1-title">Weather Dashboard</h3>
+                    <p data-lang="project1-desc">Real-time weather app using OpenWeather API. Shows forecasts, humidity, wind speed.</p>
+                    <div class="tech-stack">
+                        <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="fab fa-github"></i> <span data-lang="project-code">Code</span></a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> <span data-lang="project-live">Live Demo</span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://placehold.co/600x400/1f242d/0ef?text=Task+Manager" alt="Task Manager">
+                </div>
+                <div class="project-info">
+                    <h3 data-lang="project2-title">TaskFlow Manager</h3>
+                    <p data-lang="project2-desc">Productivity app with add/edit/delete tasks, local storage, and dark mode toggle.</p>
+                    <div class="tech-stack">
+                        <span>React</span><span>Tailwind</span><span>LocalStorage</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="fab fa-github"></i> <span data-lang="project-code">Code</span></a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> <span data-lang="project-live">Live Demo</span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://placehold.co/600x400/1f242d/0ef?text=E-commerce" alt="E-commerce">
+                </div>
+                <div class="project-info">
+                    <h3 data-lang="project3-title">Fashion Store UI</h3>
+                    <p data-lang="project3-desc">Fully responsive e-commerce front-end with product grid, cart sidebar, and hover effects.</p>
+                    <div class="tech-stack">
+                        <span>HTML5</span><span>CSS Grid</span><span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="fab fa-github"></i> <span data-lang="project-code">Code</span></a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> <span data-lang="project-live">Live Demo</span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://placehold.co/600x400/1f242d/0ef?text=Portfolio+2025" alt="Portfolio">
+                </div>
+                <div class="project-info">
+                    <h3 data-lang="project4-title">Personal Portfolio V2</h3>
+                    <p data-lang="project4-desc">Modern portfolio with dark/light mode, smooth scroll, and animated skill bars.</p>
+                    <div class="tech-stack">
+                        <span>HTML5</span><span>CSS3</span><span>JS</span><span>GSAP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="fab fa-github"></i> <span data-lang="project-code">Code</span></a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> <span data-lang="project-live">Live Demo</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- ===== CONTACT SECTION - WhatsApp Only ===== -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title"><span data-lang="contact-title-prefix">Get In</span> <span data-lang="contact-title-span">Touch</span></h2>
+            <p class="section-subtitle" data-lang="contact-subtitle">Let's talk directly on WhatsApp — quick, easy, and personal.</p>
+        </div>
+
+        <div class="contact-wrapper">
+            <!-- Contact Info Cards -->
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/963935761526?text=Hello%20Zyad%2C%20I'm%20interested%20in%20your%20services" target="_blank">+963 935 761 526</a></p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3 data-lang="contact-phone">Phone (Call)</h3>
+                    <p><a href="tel:+963935761526">+963 935 761 526</a></p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3 data-lang="contact-email">Email</h3>
+                    <p><a href="mailto:zyad@example.com">zyad@example.com</a></p>
+                </div>
+                <div class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p><a href="#">github.com/zyad</a></p>
+                </div>
+            </div>
+
+            <!-- WhatsApp Main Contact -->
+            <div class="whatsapp-main">
+                <div class="whatsapp-card">
+                    <i class="fab fa-whatsapp whatsapp-big-icon"></i>
+                    <h3 data-lang="whatsapp-card-title">Chat with me directly</h3>
+                    <p data-lang="whatsapp-card-desc">Click the button below to start a conversation on WhatsApp. I usually reply within a few hours.</p>
+                    <a href="https://wa.me/963935761526?text=Hello%20Zyad%2C%20I'm%20interested%20in%20your%20services" target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> <span data-lang="whatsapp-btn-text">Send WhatsApp Message</span>
+                    </a>
+                    <p class="quick-response" data-lang="whatsapp-qr-text">👉 Or scan this QR code to chat instantly</p>
+                    <!-- WhatsApp QR Code -->
+                    <div class="qr-placeholder">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://wa.me/963935761526" alt="WhatsApp QR Code">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p data-lang="footer-copy">Copyright &copy; 2024 by Zyad | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <!-- Scroll Reveal JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="index.js"></script>
+</body>
+</html>
