@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MHD Zyad AL-Ftyan - Frontend Developer portfolio showcasing projects, services, and contact information.">
     <title>MHD Zyad AL-Ftyan | Frontend Developer</title>
-    <!-- Font Awesome CDN (إصدار مستقر) -->
+    <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
@@ -12,17 +13,10 @@
     <header>
         <a href="#" class="logo">Zyad<span>.dev</span></a>
         
-        <input type="checkbox" id="label-check" class="label-check">
+        <input type="checkbox" id="label-check" class="label-check" aria-label="Menu toggle">
         
         <div class="header-right">
-            <div class="lang-switch-wrapper">
-                <input type="checkbox" id="lang-checkbox" class="check-toggle">
-                <label for="lang-checkbox">
-                    <span class="lang-label en">EN</span>
-                    <span class="lang-label ar">AR</span>
-                </label>
-            </div>
-            <label for="label-check" class="menu-icon">
+            <label for="label-check" class="menu-icon" aria-label="Open menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
@@ -35,6 +29,13 @@
             <a href="#services" data-lang="nav-services">Services</a>
             <a href="#projects" data-lang="nav-projects">Projects</a>
             <a href="#contact" data-lang="nav-contact">Contact</a>
+            <div class="lang-switch-wrapper nav-lang-switch">
+                <input type="checkbox" id="lang-checkbox" class="check-toggle" aria-label="Language switch">
+                <label for="lang-checkbox">
+                    <span class="lang-label en">EN</span>
+                    <span class="lang-label ar">AR</span>
+                </label>
+            </div>
         </nav>
     </header>
 
@@ -46,14 +47,14 @@
             <h3><span data-lang="hero-role-prefix">And I'm a</span> <span data-lang="hero-role">Frontend Developer</span></h3>
             <p data-lang="hero-desc">I specialize in building high-performance, responsive, and visually stunning web applications. With a focus on clean code and user-centric design, I help turn complex ideas into seamless digital experiences.</p>
             <div class="social-media">
-                <a href="https://www.facebook.com/share/17CbPBVCXu/"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://wa.me/0935761526" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://www.linkedin.com/in/zyad-alftyan" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/share/17CbPBVCXu/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/963935761526" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/zyad-alftyan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <a class="btn-cv" href="MHD_Zyad_AL_Ftyan_FlowCV_Resume_2026-05-25.pdf" download data-lang="btn-download-cv">Download CV</a>
         </div>
         <div class="div-Myimg">
-            <img src="img/تصميم_بدون_عنوان__1_-removebg-preview.png" alt="MHD Zyad">
+            <img src="img/تصميم_بدون_عنوان__1_-removebg-preview.png" alt="MHD Zyad profile">
         </div>
     </section>
 
@@ -72,7 +73,7 @@
         </div>
     </section>
 
-    <!-- ===== SERVICES SECTION ===== -->
+    <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
@@ -119,142 +120,139 @@
             </div>
         </div>
     </section>
-    <!-- ===== PROJECTS SECTION ===== -->
-<section class="projects" id="projects">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title"><span data-lang="projects-title-prefix">Latest</span> <span data-lang="projects-title-span">Projects</span></h2>
-            <p class="section-subtitle" data-lang="projects-subtitle">Some of my front-end work — real-world apps and interactive designs</p>
-        </div>
-        <div class="projects-grid">
-            <!-- Project 1 -->
-                         <div class="project-card">
-                <div class="project-img">
-                    <img src="img/TRA-MANAG.png" alt="Portfolio">
-                </div>
-                <div class="project-info">
-                    <h3 data-lang="project4-title">Training Center Management </h3>
-                    <p data-lang="project4-desc">This web application is designed to fully manage the operations of training centers. It provides an integrated dashboard to handle all core entities and their relationships, including institutes, courses, trainers, students, registrations, payments, and financial tracking for both center budgets and trainer payments. The system supports full CRUD operations (Create, Read, Update, Delete) for each entity.</p>
-                    <div class="tech-stack">
-                        <span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind</span><span>Persist Middleware</span>
-                        <span>shadcn</span><span>Radix</span><span>Zustand</span><span>Recharts</span><span>PWA</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://training-institute-manager.netlify.app/dashboard"><i class="fas fa-external-link-alt"></i> <span data-lang="project-live">Live Demo</span></a>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Project 2 -->
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="img/FlowPath.png" alt="Task Manager">
-                </div>
-                <div class="project-info">
-                    <h3 data-lang="project2-title">FlowPath</h3>
-                    <p data-lang="project2-desc"></p>
-                    <div class="tech-stack">
-                        <span>React</span><span>Tailwind</span><span>IndexedDB</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://preeminent-lolly-95905e.netlify.app/"><i class="fas fa-external-link-alt"></i> <span data-lang="project-live">Live Demo</span></a>
-                    </div>
-                </div>
-            
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span data-lang="projects-title-prefix">Latest</span> <span data-lang="projects-title-span">Projects</span></h2>
+                <p class="section-subtitle" data-lang="projects-subtitle">Some of my front-end work — real-world apps and interactive designs</p>
             </div>
-            <!-- Project 3 -->
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="img/CodeAcademy.png" alt="E-commerce">
-                </div>
-                <div class="project-info">
-                    <h3 data-lang="project3-title">Code Academy – Interactive Programming Learning Platform for Kids</h3>
-                    <p data-lang="project3-desc">Code Academy is a fully responsive, Arabic-first web application designed to teach children (ages 8–16) programming concepts in a fun, engaging, and game‑like way. The platform integrates structured courses, hands‑on projects, and educational games into one colorful, easy‑to‑navigate interface.</p>
-                    <div class="tech-stack">
-                        <span>HTML5 </span><span>CSS3 </span><span>JavaScript</span>
-                        <span>Font Awesome 6</span>
+            <div class="projects-grid">
+                <!-- Project 1: Training Center Management -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="img/TRA-MANAG.png" alt="Training Center Management Dashboard">
                     </div>
-                    <div class="project-links">
-                        <a href="https://code-academy1.netlify.app/"><i class="fas fa-external-link-alt"></i> <span data-lang="project-live">Live Demo</span></a>
+                    <div class="project-info">
+                        <h3 data-lang="project4-title">Training Center Management</h3>
+                        <p data-lang="project4-desc">This web application is designed to fully manage the operations of training centers. It provides an integrated dashboard to handle all core entities and their relationships, including institutes, courses, trainers, students, registrations, payments, and financial tracking for both center budgets and trainer payments. The system supports full CRUD operations (Create, Read, Update, Delete) for each entity.</p>
+                        <div class="tech-stack">
+                            <span>React</span><span>TypeScript</span><span>Vite</span><span>Tailwind</span><span>Zustand</span><span>Recharts</span><span>PWA</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://training-institute-manager.netlify.app/dashboard" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> <span data-lang="project-live">Live Demo</span></a>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <!-- Project 4 -->
-            <div class="project-card">
-                <div class="project-img">
-                    <img src="img/W-API.png" alt="Weather App">
-                </div>
-                <div class="project-info">
-                    <h3 data-lang="project1-title">Weather-API</h3>
-                    <p data-lang="project1-desc">Real-time weather app using OpenWeather API. Shows forecasts, humidity, wind speed.</p>
-                    <div class="tech-stack">
-                        <span>React</span><span>Material-UI</span><span>Vite</span><span>API</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://training-institute-manager.netlify.app/dashboard"><i class="fas fa-external-link-alt"></i> <span data-lang="project-live">Live Demo</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section><!-- ===== CONTACT SECTION - WhatsApp Only ===== -->
-<section class="contact" id="contact">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title"><span data-lang="contact-title-prefix">Get In</span> <span data-lang="contact-title-span">Touch</span></h2>
-            <p class="section-subtitle" data-lang="contact-subtitle">Let's talk directly on WhatsApp — quick, easy, and personal.</p>
-        </div>
-
-        <div class="contact-wrapper">
-            <!-- Contact Info Cards -->
-            <div class="contact-info">
-                <div class="contact-card">
-                    <i class="fab fa-whatsapp"></i>
-                    <h3>WhatsApp</h3>
-                    <p><a href="https://wa.me/963935761526?text=Hello%20Zyad%2C%20I'm%20interested%20in%20your%20services" target="_blank">+963 935 761 526</a></p>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-phone-alt"></i>
-                    <h3 data-lang="contact-phone">Phone (Call)</h3>
-                    <p><a href="tel:+963935761526">+963 935 761 526</a></p>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <h3 data-lang="contact-email">Email</h3>
-                    <p><a href="mailto:zyad@example.com">mhdzyadalftyan@gmail.com</a></p>
                 </div>
 
-            </div>
+                <!-- Project 2: FlowPath -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="img/FlowPath.png" alt="FlowPath Task Manager">
+                    </div>
+                    <div class="project-info">
+                        <h3 data-lang="project2-title">FlowPath – Simple Task Management</h3>
+                        <p data-lang="project2-desc">FlowPath is a lightweight, client‑side task management web application built with React, styled with Tailwind CSS, and using IndexedDB for local storage. It helps users organize daily tasks without needing a backend server or internet connection (after initial load). All data stays in the browser.</p>
+                        <div class="tech-stack">
+                            <span>React</span><span>Tailwind</span><span>IndexedDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://preeminent-lolly-95905e.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> <span data-lang="project-live">Live Demo</span></a>
+                        </div>
+                    </div>
+                </div>
 
-            <!-- WhatsApp Main Contact -->
-            <div class="whatsapp-main">
-                <div class="whatsapp-card">
-                    <i class="fab fa-whatsapp whatsapp-big-icon"></i>
-                    <h3 data-lang="whatsapp-card-title">Chat with me directly</h3>
-                    <p data-lang="whatsapp-card-desc">Click the button below to start a conversation on WhatsApp. I usually reply within a few hours.</p>
-                    <a href="https://wa.me/963935761526?text=Hello%20Zyad%2C%20I'm%20interested%20in%20your%20services" target="_blank" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i> <span data-lang="whatsapp-btn-text">Send WhatsApp Message</span>
-                    </a>
-                    <p class="quick-response" data-lang="whatsapp-qr-text">👉 Or scan this QR code to chat instantly</p>
-                    <!-- WhatsApp QR Code -->
-                    <div class="qr-placeholder">
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://wa.me/963935761526" alt="WhatsApp QR Code">
+                <!-- Project 3: Code Academy -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="img/CodeAcademy.png" alt="Code Academy for Kids">
+                    </div>
+                    <div class="project-info">
+                        <h3 data-lang="project3-title">Code Academy – Interactive Programming Learning Platform for Kids</h3>
+                        <p data-lang="project3-desc">Code Academy is a fully responsive, Arabic-first web application designed to teach children (ages 8–16) programming concepts in a fun, engaging, and game‑like way. The platform integrates structured courses, hands‑on projects, and educational games into one colorful, easy‑to‑navigate interface.</p>
+                        <div class="tech-stack">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Font Awesome 6</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://code-academy1.netlify.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> <span data-lang="project-live">Live Demo</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Weather-API -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="img/W-API.png" alt="Weather App">
+                    </div>
+                    <div class="project-info">
+                        <h3 data-lang="project1-title">Weather Dashboard</h3>
+                        <p data-lang="project1-desc">Real-time weather app using OpenWeather API. Shows forecasts, humidity, wind speed.</p>
+                        <div class="tech-stack">
+                            <span>React</span><span>Material-UI</span><span>Vite</span><span>API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> <span data-lang="project-live">Live Demo</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer -->
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><span data-lang="contact-title-prefix">Get In</span> <span data-lang="contact-title-span">Touch</span></h2>
+                <p class="section-subtitle" data-lang="contact-subtitle">Let's talk directly on WhatsApp — quick, easy, and personal.</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/963935761526?text=Hello%20Zyad%2C%20I'm%20interested%20in%20your%20services" target="_blank" rel="noopener noreferrer">+963 935 761 526</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3 data-lang="contact-phone">Phone (Call)</h3>
+                        <p><a href="tel:+963935761526">+963 935 761 526</a></p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3 data-lang="contact-email">Email</h3>
+                        <p><a href="mailto:mhdzyadalftyan@gmail.com">mhdzyadalftyan@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="whatsapp-main">
+                    <div class="whatsapp-card">
+                        <i class="fab fa-whatsapp whatsapp-big-icon"></i>
+                        <h3 data-lang="whatsapp-card-title">Chat with me directly</h3>
+                        <p data-lang="whatsapp-card-desc">Click the button below to start a conversation on WhatsApp. I usually reply within a few hours.</p>
+                        <a href="https://wa.me/963935761526?text=Hello%20Zyad%2C%20I'm%20interested%20in%20your%20services" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i> <span data-lang="whatsapp-btn-text">Send WhatsApp Message</span>
+                        </a>
+                        <p class="quick-response" data-lang="whatsapp-qr-text">👉 Or scan this QR code to chat instantly</p>
+                        <div class="qr-placeholder">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://wa.me/963935761526" alt="WhatsApp QR Code">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="footer-text">
             <p data-lang="footer-copy">Copyright &copy; 2024 by Zyad | All Rights Reserved.</p>
         </div>
         <div class="footer-iconTop">
-            <a href="#home"><i class="fas fa-arrow-up"></i></a>
+            <a href="#home" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
         </div>
     </footer>
 
-    <!-- Scroll Reveal JS -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="index.js"></script>
 </body>

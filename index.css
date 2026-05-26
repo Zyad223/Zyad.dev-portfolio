@@ -9,7 +9,6 @@
     text-decoration: none;
     border: none;
     outline: none;
-    max-width: 100%;
 }
 
 :root {
@@ -33,14 +32,6 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
-    width: 100%;
-    position: relative;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
 }
 
 /* Custom Scrollbar */
@@ -51,11 +42,13 @@ img {
     background: var(--bg-color);
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--gradient);
+    background: var(--main-color);
     border-radius: 10px;
 }
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+}
 
-/* ===== HEADER & NAVIGATION ===== */
 /* RTL Support */
 body.rtl {
     direction: rtl;
@@ -63,7 +56,6 @@ body.rtl {
     font-family: "Cairo", "Poppins", sans-serif;
 }
 
-/* Apply Arabic font to all except icons */
 body.rtl *:not(i) {
     font-family: "Cairo", "Poppins", sans-serif;
 }
@@ -78,49 +70,55 @@ body.rtl span {
     letter-spacing: 0;
 }
 
-/* Fix RTL header layout */
-body.rtl header {
-    flex-direction: row-reverse;
-}
-
 body.rtl .navigation {
     flex-direction: row-reverse;
 }
 
-@media (max-width: 768px) {
-    body.rtl header {
-        flex-direction: row-reverse;
-    }
-    body.rtl .navigation {
-        flex-direction: column;
-        right: 0;
-        left: auto;
-    }
-}
-
-body.rtl .social-media,
-body.rtl .about-stats,
-body.rtl .tech-stack,
-body.rtl .project-links {
-    flex-direction: row; /* Keep horizontal but let text-align handle it */
-}
-
-body.rtl .service-link i,
-body.rtl .project-links a i {
-    transform: rotate(180deg);
-}
-
-body.rtl .service-link:hover i {
-    transform: rotate(180deg) translateX(-4px);
-}
-
+/* Header & Navigation */
 .header-right {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
-/* Professional Language Switcher */
+/* Ensure header content fits */
+header {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Fix for RTL layout */
+body.rtl .header-right {
+    flex-direction: row-reverse;
+}
+
+/* Mobile menu fixes */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 3%;
+    }
+    
+    .header-right {
+        gap: 0.5rem;
+    }
+    
+    .lang-switch-wrapper {
+        transform: scale(0.8);
+    }
+    
+    .lang-label.en {
+        left: -20px;
+    }
+    .lang-label.ar {
+        right: -20px;
+    }
+    
+    .menu-icon {
+        transform: scale(0.85);
+        margin-left: 0.5rem;
+    }
+}
+
 .lang-switch-wrapper {
     display: flex;
     align-items: center;
@@ -183,16 +181,6 @@ body.rtl .service-link:hover i {
     left: 26px;
 }
 
-body.rtl .check-toggle:checked + label:after {
-    left: 2px;
-    right: 26px;
-}
-
-body.rtl .check-toggle + label:after {
-    right: 2px;
-    left: auto;
-}
-
 .check-toggle:checked + label .lang-label.ar {
     opacity: 1;
     color: var(--main-color);
@@ -233,7 +221,6 @@ header.sticky {
     cursor: default;
 }
 
-/* Main Navigation - Visible on large screens */
 .navigation {
     display: flex;
     gap: 2rem;
@@ -242,7 +229,6 @@ header.sticky {
 .navigation a {
     font-size: 1.7rem;
     color: var(--text-color);
-    margin-left: 0;  /* Reset margin-left as gap is enough */
     transition: 0.3s;
 }
 
@@ -251,7 +237,6 @@ header.sticky {
     color: var(--main-color);
 }
 
-/* Hamburger Icon - Hidden by default */
 .menu-icon {
     display: none;
     cursor: pointer;
@@ -276,29 +261,24 @@ header.sticky {
 #label-check:checked ~ .header-right .menu-icon .line1 {
     transform: rotate(45deg) translate(7px, 7px);
 }
-
 #label-check:checked ~ .header-right .menu-icon .line2 {
     opacity: 0;
 }
-
 #label-check:checked ~ .header-right .menu-icon .line3 {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-
-/* Hide the actual checkbox */
 .label-check {
     display: none;
 }
 
-
-/* ===== SECTIONS GENERAL ===== */
+/* Sections */
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
 
-/* ===== HOME SECTION ===== */
+/* Home Section */
 .home {
     display: flex;
     justify-content: center;
@@ -385,11 +365,9 @@ section {
     object-fit: cover;
     border-radius: 50%;
     background: var(--bg-color);
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
 }
 
-/* ===== ABOUT SECTION ===== */
+/* About Section */
 .about {
     display: flex;
     justify-content: center;
@@ -404,7 +382,6 @@ section {
     max-width: 300px;
     border-radius: 2rem;
     box-shadow: 0 0 2rem var(--main-color);
-    image-rendering: -webkit-optimize-contrast;
 }
 
 .about-content h3 {
@@ -415,22 +392,6 @@ section {
 .about-content p {
     font-size: 1.6rem;
     margin-bottom: 2rem;
-}
-
-.about-stats {
-    display: flex;
-    gap: 4rem;
-    margin: 3rem 0;
-}
-
-.stat-item h4 {
-    font-size: 3rem;
-    color: var(--main-color);
-}
-
-.stat-item p {
-    font-size: 1.4rem;
-    margin: 0;
 }
 
 span {
@@ -454,7 +415,7 @@ span {
     color: var(--bg-color);
 }
 
-/* ===== SERVICES SECTION ===== */
+/* Services Section */
 .services {
     padding: 8rem 9% 5rem;
     background: var(--bg-color);
@@ -463,8 +424,6 @@ span {
 .services .container {
     max-width: 1200px;
     margin: 0 auto;
-    width: 100%;
-    overflow-x: hidden;
 }
 
 .section-header {
@@ -529,7 +488,6 @@ span {
     color: var(--bg-color);
 }
 
-
 .service-card h3 {
     font-size: 2rem;
     font-weight: 600;
@@ -566,7 +524,7 @@ span {
     transform: translateX(4px);
 }
 
-/* ===== PROJECTS SECTION ===== */
+/* Projects Section */
 .projects {
     padding: 8rem 9% 5rem;
     background: var(--bg-color);
@@ -574,11 +532,9 @@ span {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2.5rem;
     margin-top: 2rem;
-    width: 100%;
-    overflow-x: hidden;
 }
 
 .project-card {
@@ -606,7 +562,6 @@ span {
     height: 250px;
     object-fit: cover;
     transition: var(--transition);
-    image-rendering: -webkit-optimize-contrast;
 }
 
 .project-card:hover .project-img img {
@@ -664,8 +619,7 @@ span {
     color: var(--main-color);
 }
 
-
-/* ===== CONTACT SECTION ===== */
+/* Contact Section */
 .contact {
     padding: 8rem 9% 10rem;
     background: var(--bg-color);
@@ -676,8 +630,6 @@ span {
     grid-template-columns: 1fr 1.2fr;
     gap: 4rem;
     margin-top: 3rem;
-    width: 100%;
-    overflow-x: hidden;
 }
 
 .contact-info {
@@ -791,153 +743,8 @@ span {
     background: white;
     padding: 5px;
 }
-/* ===================================== */
-/* ===== RESPONSIVE BREAKPOINTS ===== */
-/* ===================================== */
 
-@media (max-width: 1200px) {
-    html {
-        font-size: 55%;
-    }
-}
-
-@media (max-width: 991px) {
-    header {
-        padding: 2rem 3%;
-    }
-    section {
-        padding: 10rem 3% 2rem;
-    }
-    .services {
-        padding: 7rem 3%;
-    }
-    .projects {
-        padding: 7rem 3%;
-    }
-    .contact {
-        padding: 7rem 3%;
-    }
-}
-
-@media (max-width: 991px) {
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .header-right {
-        gap: 1rem;
-    }
-    
-    .lang-label {
-        font-size: 1rem;
-    }
-
-    .lang-label.en {
-        left: -22px;
-    }
-
-    .lang-label.ar {
-        right: -22px;
-    }
-
-    .check-toggle + label {
-        width: 40px;
-        height: 22px;
-    }
-
-    .check-toggle + label:after {
-        width: 14px;
-        height: 14px;
-    }
-
-    .check-toggle:checked + label:after {
-        left: 20px;
-    }
-    body.rtl .check-toggle + label:after {
-        right: 2px;
-        left: auto;
-    }
-    body.rtl .check-toggle:checked + label:after {
-        right: 20px;
-        left: auto;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-    
-    .navigation {
-        position: fixed;
-        top: 6.5rem; /* ارتفاع الهيدر تقريباً */
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        padding: 2rem 3%;
-        background: rgba(11, 13, 23, 0.95);
-        backdrop-filter: blur(15px);
-        border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        z-index: 998;
-        box-sizing: border-box;
-    }
-
-    #label-check:checked ~ .navigation {
-        display: flex;
-    }
-
-
-    .navigation a {
-        display: block;
-        font-size: 2.2rem;
-        margin: 3rem 0;
-        font-weight: 500;
-        transition: var(--transition);
-    }
-
-    .navigation a:hover,
-    .navigation a.active {
-        color: var(--main-color);
-        transform: scale(1.1);
-    }
-
-
-    .home {
-        flex-direction: column;
-    }
-
-    .home-content h3 {
-        font-size: 2.6rem;
-    }
-
-    .home-content h1 {
-        font-size: 5rem;
-    }
-
-    .div-Myimg {
-        width: 60vw;
-        margin-top: 4rem;
-    }
-
-    .about {
-        flex-direction: column-reverse;
-    }
-
-    .about-img img {
-        width: 60vw;
-        margin-top: 4rem;
-    }
-
-    .contact-info {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* ===== FOOTER ===== */
+/* Footer */
 .footer {
     display: flex;
     justify-content: space-between;
@@ -971,13 +778,270 @@ span {
     color: var(--second-bg-color);
 }
 
-@media (max-width: 768px) {
-    .footer {
+/* Responsive Breakpoints */
+
+/* Large Desktop */
+@media (max-width: 1400px) {
+    html {
+        font-size: 58%;
+    }
+    section {
+        padding: 9rem 6% 2rem;
+    }
+}
+
+/* Desktop */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+    .home {
+        gap: 5rem;
+    }
+    .home-content h1 {
+        font-size: 4.5rem;
+    }
+    .home-content h3 {
+        font-size: 2.8rem;
+    }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    html {
+        font-size: 52%;
+    }
+    header {
+        padding: 1.5rem 4%;
+    }
+    section {
+        padding: 8rem 4% 2rem;
+    }
+    .services, .projects, .contact {
+        padding: 6rem 4%;
+    }
+    .home {
+        flex-direction: column;
+        gap: 4rem;
+        padding: 12rem 4% 4rem;
+    }
+    .home-content {
+        text-align: center;
+        max-width: 600px;
+    }
+    .home-content p {
+        max-width: 100%;
+    }
+    .social-media {
+        justify-content: center;
+    }
+    .div-Myimg {
+        width: 35vw;
+        min-width: 280px;
+    }
+    .about {
         flex-direction: column-reverse;
+        gap: 5rem;
+        padding: 8rem 4%;
+    }
+    .about-img img {
+        width: 35vw;
+        min-width: 250px;
+    }
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+    .header-right {
+        gap: 1rem;
+    }
+    .lang-label {
+        font-size: 1rem;
+    }
+    .lang-label.en {
+        left: -22px;
+    }
+    .lang-label.ar {
+        right: -22px;
+    }
+    .check-toggle + label {
+        width: 40px;
+        height: 22px;
+    }
+    .check-toggle + label:after {
+        width: 14px;
+        height: 14px;
+    }
+    .check-toggle:checked + label:after {
+        left: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+    
+    .navigation {
+        position: fixed;
+        top: 7rem;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 7rem);
+        padding: 2rem 5%;
+        background: rgba(11, 13, 23, 0.98);
+        backdrop-filter: blur(15px);
+        border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        z-index: 998;
+        overflow-y: auto;
+    }
+    #label-check:checked ~ .navigation {
+        display: flex;
+    }
+    .navigation a {
+        display: block;
+        font-size: 2.2rem;
+        margin: 2.5rem 0;
+        font-weight: 500;
+    }
+
+    .home {
+        padding: 10rem 5% 3rem;
+    }
+    .home-content h1 {
+        font-size: 3.8rem;
+    }
+    .home-content h3 {
+        font-size: 2.2rem;
+    }
+    .home-content p {
+        font-size: 1.5rem;
+    }
+    .div-Myimg {
+        width: 50vw;
+        min-width: 220px;
+    }
+
+    .about {
+        padding: 6rem 5%;
+        gap: 4rem;
+    }
+    .about-img img {
+        width: 45vw;
+        min-width: 200px;
+    }
+    .about-content h2 {
+        font-size: 3.2rem;
+    }
+    .about-content h3 {
+        font-size: 2rem;
+    }
+    .about-content p {
+        font-size: 1.5rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .service-card {
+        padding: 3rem 2rem;
+    }
+    .service-icon {
+        width: 6rem;
+        height: 6rem;
+    }
+    .service-icon i {
+        font-size: 2.5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .project-img img {
+        height: 200px;
+    }
+    .project-info {
+        padding: 2rem;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .contact-card {
+        padding: 1.5rem;
+    }
+    .whatsapp-card {
+        padding: 2rem;
+    }
+
+    .footer {
+        padding: 2rem 5%;
+        flex-direction: column;
+        gap: 1.5rem;
     }
     .footer-text p {
-        margin-top: 2rem;
         text-align: center;
     }
 }
 
+/* Small Mobile */
+@media (max-width: 480px) {
+    html {
+        font-size: 45%;
+    }
+    header {
+        padding: 1rem 3%;
+    }
+    .logo {
+        font-size: 2rem;
+    }
+    .home {
+        padding: 9rem 3% 2rem;
+    }
+    .home-content h1 {
+        font-size: 3rem;
+    }
+    .home-content h3 {
+        font-size: 1.8rem;
+    }
+    .home-content p {
+        font-size: 1.4rem;
+    }
+    .div-Myimg {
+        width: 60vw;
+        min-width: 180px;
+    }
+    .about {
+        padding: 5rem 3%;
+    }
+    .about-img img {
+        width: 50vw;
+        min-width: 170px;
+    }
+    .services-grid,
+    .projects-grid {
+        gap: 1.5rem;
+    }
+    .project-img img {
+        height: 160px;
+    }
+    .section-title {
+        font-size: 2.8rem;
+    }
+    .whatsapp-btn {
+        padding: 1rem 1.8rem;
+        font-size: 1.4rem;
+    }
+}

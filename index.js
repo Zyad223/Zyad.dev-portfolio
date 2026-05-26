@@ -16,9 +16,6 @@ const translations = {
         "about-subtitle": "Frontend Developer & Coding Instructor",
         "about-desc1": "I am a passionate Frontend Developer with over 3 years of experience in creating modern web interfaces. My journey started with a curiosity for how things work on the web, which evolved into a career dedicated to crafting exceptional user experiences.",
         "about-desc2": "Beyond coding, I am a Coding Instructor, sharing my knowledge with aspiring developers. I believe that teaching is the best way to master a craft, and I'm dedicated to helping the next generation of coders succeed.",
-        "stat-years": "Years Exp.",
-        "stat-projects": "Projects",
-        "stat-students": "Students",
         "btn-talk": "Let's Talk",
         "services-title-prefix": "What",
         "services-title-span": "I Offer",
@@ -45,7 +42,7 @@ const translations = {
         "project2-desc": "FlowPath is a lightweight, client‑side task management web application built with React, styled with Tailwind CSS, and using IndexedDB for local storage. It helps users organize daily tasks without needing a backend server or internet connection (after initial load). All data stays in the browser.",
         "project3-title": "Code Academy – Interactive Programming Learning Platform for Kids",
         "project3-desc": "Code Academy is a fully responsive, Arabic-first web application designed to teach children (ages 8–16) programming concepts in a fun, engaging, and game‑like way. The platform integrates structured courses, hands‑on projects, and educational games into one colorful, easy‑to‑navigate interface.",
-        "project4-title": "Training Center Management ",
+        "project4-title": "Training Center Management",
         "project4-desc": "This web application is designed to fully manage the operations of training centers. It provides an integrated dashboard to handle all core entities and their relationships, including institutes, courses, trainers, students, registrations, payments, and financial tracking for both center budgets and trainer payments. The system supports full CRUD operations (Create, Read, Update, Delete) for each entity.",
         "project-live": "Live Demo",
         "contact-title-prefix": "Get In",
@@ -76,9 +73,6 @@ const translations = {
         "about-subtitle": "مطور واجهات أمامية ومدرب برمجة",
         "about-desc1": "أنا مطور واجهات أمامية شغوف لدي أكثر من 3 سنوات من الخبرة في إنشاء واجهات ويب حديثة. بدأت رحلتي بفضول حول كيفية عمل الأشياء على الويب، والتي تطورت إلى مسيرة مهنية مخصصة لصياغة تجارب مستخدم استثنائية.",
         "about-desc2": "بالإضافة إلى البرمجة، أنا مدرب برمجة، أشارك معرفتي مع المطورين الطموحين. أؤمن أن التدريس هو أفضل وسيلة لإتقان الحرفة، وأنا مكرس لمساعدة الجيل القادم من المبرمجين على النجاح.",
-        "stat-years": "سنوات خبرة",
-        "stat-projects": "مشروع",
-        "stat-students": "طالب",
         "btn-talk": "تحدث معي",
         "services-title-prefix": "ماذا",
         "services-title-span": "أقدم",
@@ -102,12 +96,11 @@ const translations = {
         "project1-title": "لوحة بيانات الطقس",
         "project1-desc": "تطبيق طقس في الوقت الفعلي باستخدام OpenWeather API. يعرض التوقعات والرطوبة وسرعة الرياح.",
         "project2-title": "FlowPath – تطبيق بسيط لإدارة المهام",
-        "project2-desc": "FlowPath هو تطبيق ويب خفيف لإدارة المهام اليومية، يعمل بالكامل داخل المتصفح دون الحاجة إلى خادم أو اتصال بالإنترنت (بعد تحميله أول مرة). بُني باستخدام React للواجهة، Tailwind CSS للتصميم، و IndexedDB للتخزين المحلي. ",
-        "project3-title": "  Code Academy – منصة تعليم برمجة متكاملة للأطفال",
+        "project2-desc": "FlowPath هو تطبيق ويب خفيف لإدارة المهام اليومية، يعمل بالكامل داخل المتصفح دون الحاجة إلى خادم أو اتصال بالإنترنت (بعد تحميله أول مرة). بُني باستخدام React للواجهة، Tailwind CSS للتصميم، و IndexedDB للتخزين المحلي.",
+        "project3-title": "Code Academy – منصة تعليم برمجة متكاملة للأطفال",
         "project3-desc": "Code Academy هو موقع ويب تعليمي تفاعلي موجه للأطفال (من عمر 8 إلى 16 سنة)، يهدف إلى تعليم البرمجة ومفاهيم الحاسوب بطرق ممتعة ومشوقة. يجمع الموقع بين الدورات التعليمية، المشاريع التطبيقية، والألعاب البرمجية في قالب واحد سهل وجذاب.",
-        "project4-title": "  لإدارة مركز التدريب",
-        "project4-desc":"صُمم هذا التطبيق الإلكتروني لإدارة عمليات مراكز التدريب بشكل كامل. يوفر لوحة تحكم متكاملة لإدارة جميع الكيانات الأساسية وعلاقاتها، بما في ذلك المعاهد والدورات التدريبية والمدربين والطلاب والتسجيلات والمدفوعات والتتبع المالي لميزانيات المراكز ومدفوعات المدربين. يدعم النظام عمليات CRUD (إنشاء، قراءة، تحديث، حذف) كاملة لكل كيان.",
-        "project-code": "الكود",
+        "project4-title": "إدارة مركز التدريب",
+        "project4-desc": "صُمم هذا التطبيق الإلكتروني لإدارة عمليات مراكز التدريب بشكل كامل. يوفر لوحة تحكم متكاملة لإدارة جميع الكيانات الأساسية وعلاقاتها، بما في ذلك المعاهد والدورات التدريبية والمدربين والطلاب والتسجيلات والمدفوعات والتتبع المالي لميزانيات المراكز ومدفوعات المدربين. يدعم النظام عمليات CRUD (إنشاء، قراءة، تحديث، حذف) كاملة لكل كيان.",
         "project-live": "عرض حي",
         "contact-title-prefix": "تواصل",
         "contact-title-span": "معي",
@@ -122,53 +115,65 @@ const translations = {
     }
 };
 
-/* ===== LANGUAGE TOGGLE LOGIC ===== */
+// Language Toggle Logic
 const langCheckbox = document.querySelector('#lang-checkbox');
 let currentLang = localStorage.getItem('selectedLang') || 'en';
 
 const updateContent = (lang) => {
     document.querySelectorAll('[data-lang]').forEach(el => {
         const key = el.getAttribute('data-lang');
-        if (translations[lang][key]) {
+        if (translations[lang] && translations[lang][key]) {
             el.innerHTML = translations[lang][key];
         }
     });
     
-    // Update direction and toggle state
     if (lang === 'ar') {
         document.body.classList.add('rtl');
         document.documentElement.lang = 'ar';
-        langCheckbox.checked = true;
+        document.documentElement.dir = 'rtl';
+        if (langCheckbox) langCheckbox.checked = true;
     } else {
         document.body.classList.remove('rtl');
         document.documentElement.lang = 'en';
-        langCheckbox.checked = false;
+        document.documentElement.dir = 'ltr';
+        if (langCheckbox) langCheckbox.checked = false;
     }
     
     localStorage.setItem('selectedLang', lang);
 };
 
 // Initial load
-updateContent(currentLang);
-
-langCheckbox.addEventListener('change', () => {
-    currentLang = langCheckbox.checked ? 'ar' : 'en';
+if (langCheckbox) {
     updateContent(currentLang);
-});
+    langCheckbox.addEventListener('change', () => {
+        currentLang = langCheckbox.checked ? 'ar' : 'en';
+        updateContent(currentLang);
+    });
+}
 
-/* ===== TOGGLE MENU ICON ===== */
-let menuIcon = document.querySelector('.menu-icon');
-let navigation = document.querySelector('.navigation');
-let labelCheck = document.querySelector('#label-check');
+// Toggle menu and body scroll lock
+const labelCheck = document.querySelector('#label-check');
+const body = document.body;
 
-// Close menu when clicking a link
+if (labelCheck) {
+    labelCheck.addEventListener('change', () => {
+        if (labelCheck.checked) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = '';
+        }
+    });
+}
+
+// Close menu when clicking a navigation link
 document.querySelectorAll('.navigation a').forEach(link => {
     link.addEventListener('click', () => {
-        labelCheck.checked = false;
+        if (labelCheck) labelCheck.checked = false;
+        body.style.overflow = '';
     });
 });
 
-/* ===== SCROLL SECTIONS ACTIVE LINK ===== */
+// Scroll active link and sticky header
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
@@ -179,28 +184,31 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height) {
+        if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+                let activeLink = document.querySelector(`header nav a[href*="${id}"]`);
+                if (activeLink) activeLink.classList.add('active');
             });
-        };
+        }
     });
 
-    /* ===== STICKY NAVBAR ===== */
     let header = document.querySelector('header');
-    header.classList.toggle('sticky', window.scrollY > 100);
+    if (header) header.classList.toggle('sticky', window.scrollY > 100);
 };
 
-/* ===== SCROLL REVEAL ===== */
-ScrollReveal({
-    reset: true,
-    distance: '80px',
-    duration: 2000,
-    delay: 200
+// Scroll Reveal with DOMContentLoaded to ensure elements exist
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof ScrollReveal !== 'undefined') {
+        ScrollReveal({
+            reset: true,
+            distance: '80px',
+            duration: 2000,
+            delay: 200
+        });
+        ScrollReveal().reveal('.home-content, .section-header', { origin: 'top' });
+        ScrollReveal().reveal('.div-Myimg, .services-grid, .projects-grid, .contact-wrapper', { origin: 'bottom' });
+        ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
+        ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+    }
 });
-
-ScrollReveal().reveal('.home-content, .section-header', { origin: 'top' });
-ScrollReveal().reveal('.div-Myimg, .services-grid, .projects-grid, .contact-wrapper', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
