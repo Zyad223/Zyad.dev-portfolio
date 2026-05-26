@@ -9,6 +9,7 @@
     text-decoration: none;
     border: none;
     outline: none;
+    max-width: 100%;
 }
 
 :root {
@@ -32,6 +33,14 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Custom Scrollbar */
@@ -434,6 +443,8 @@ span {
 .services .container {
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .section-header {
@@ -543,9 +554,11 @@ span {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2.5rem;
     margin-top: 2rem;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .project-card {
@@ -643,6 +656,8 @@ span {
     grid-template-columns: 1fr 1.2fr;
     gap: 4rem;
     margin-top: 3rem;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .contact-info {
@@ -784,6 +799,12 @@ span {
     }
 }
 
+@media (max-width: 991px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     .header-right {
         gap: 1rem;
@@ -834,6 +855,7 @@ span {
         align-items: center;
         justify-content: flex-start;
         z-index: 998;
+        box-sizing: border-box;
     }
 
     #label-check:checked ~ .navigation {
