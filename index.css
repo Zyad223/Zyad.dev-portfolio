@@ -17,7 +17,7 @@
     --text-color: #f0f6fc;
     --main-color: #00d2ff;
     --accent-color: #9d50bb;
-    --gradient: linear-gradient(135deg, var(--main-color));
+    --gradient: linear-gradient(135deg, var(--main-color), var(--accent-color));
     --card-bg: rgba(22, 27, 34, 0.7);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -31,6 +31,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Custom Scrollbar */
