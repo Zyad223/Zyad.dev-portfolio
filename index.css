@@ -78,13 +78,23 @@ body.rtl span {
     letter-spacing: 0;
 }
 
+/* Fix RTL header layout */
+body.rtl header {
+    flex-direction: row-reverse;
+}
+
 body.rtl .navigation {
     flex-direction: row-reverse;
 }
 
 @media (max-width: 768px) {
+    body.rtl header {
+        flex-direction: row-reverse;
+    }
     body.rtl .navigation {
         flex-direction: column;
+        right: 0;
+        left: auto;
     }
 }
 
@@ -171,6 +181,16 @@ body.rtl .service-link:hover i {
 
 .check-toggle:checked + label:after {
     left: 26px;
+}
+
+body.rtl .check-toggle:checked + label:after {
+    left: 2px;
+    right: 26px;
+}
+
+body.rtl .check-toggle + label:after {
+    right: 2px;
+    left: auto;
 }
 
 .check-toggle:checked + label .lang-label.ar {
@@ -834,6 +854,14 @@ span {
 
     .check-toggle:checked + label:after {
         left: 20px;
+    }
+    body.rtl .check-toggle + label:after {
+        right: 2px;
+        left: auto;
+    }
+    body.rtl .check-toggle:checked + label:after {
+        right: 20px;
+        left: auto;
     }
 
     .menu-icon {
